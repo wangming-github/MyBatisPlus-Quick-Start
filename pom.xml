@@ -12,6 +12,7 @@
         <module>demo-6-enum</module>
         <module>demo-7-AutoGenerator</module>
         <module>demo-8-datasource</module>
+        <module>demo-9-mybatisX</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>

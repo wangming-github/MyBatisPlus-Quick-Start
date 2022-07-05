@@ -1,0 +1,26 @@
+server:
+  port: 8082
+spring:
+  # 配置数据源信息
+  datasource:
+    # 配置数据源类型
+    type: com.zaxxer.hikari.HikariDataSource
+    # 配置连接数据库信息
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/mybatisplus-quick-start?characterEncoding=utf-8&useSSL=false
+    username: root
+    password: admin123
+
+mybatis-plus:
+  configuration:
+    # 配置MyBatis日志
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  mapper-locations: classpath:com/maizi/demo/mapper/xml/*.xml
+  global-config:
+    db-config:
+      #配置MyBatis-Plus操作表的默认前缀
+      table-prefix: t2_
+      #使用数据库的自增策略，注意，该类型请确保数据库设置了id自增否则无效
+      id-type: auto
+  #配置类型别名所对应的包
+  type-aliases-package: com.maizi.demo.pojo
